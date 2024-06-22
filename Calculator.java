@@ -26,13 +26,28 @@ public class Calculator {
         System.out.println("Welcome to Your Calculator!");
         System.out.println("To start enter the first number:");
 
-        double num1 = scanner.nextDouble();
+        double a = scanner.nextDouble();
 
-        System.out.println("\nGreat! Your First number is " + num1 + "\n");
+        System.out.println("\nGreat! Your First number is " + a + "\n");
         System.out.println("Now enter the next number: ");
 
-        double num2 = scanner.nextDouble();
+        double b = scanner.nextDouble();
 
-        System.out.println("\nGreat, your next number is: " + num2);
+        System.out.println("\nGreat, your next number is: " + b);
+        System.out.println("\nPlease enter an operator (add, multiply, subtract, or divide):" + "\n");
+
+        scanner.nextLine();
+        String operator = scanner.nextLine();
+        double result;
+
+        switch (operator) {
+            case "add":
+                result = a + b;
+                System.out.println("The answer to your equation is: " + result);
+                break;
+            default:
+                System.out.println("Invalid operator. Please try again.");
     }
+
+}
 }
